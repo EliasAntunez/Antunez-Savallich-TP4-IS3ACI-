@@ -1,1 +1,2 @@
 Commit 1: Inicio del trabajo en el issue #4
+Commit 2: Se finalizó la HU-04
