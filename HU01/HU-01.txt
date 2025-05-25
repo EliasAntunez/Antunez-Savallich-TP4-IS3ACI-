@@ -1,1 +1,2 @@
 Commit 1: Inicio del trabajo en el Issue #1 - refs #1
+Commit 2: Se terminó de realizar la HU-01
