@@ -1,1 +1,5 @@
 .venv
+test.http
+.env
+__pycache__/
+*.pyc
