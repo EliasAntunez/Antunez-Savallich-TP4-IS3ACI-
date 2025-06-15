@@ -1,0 +1,23 @@
+services:
+  web:
+    build: .
+    ports:
+      - "${FLASK_PORT}:${FLASK_PORT}"
+    env_file:
+      - .env  # Carga todas las variables
+    environment:
+      - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/${POSTGRES_DB}
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    env_file:
+      - .env
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postgres_data:
